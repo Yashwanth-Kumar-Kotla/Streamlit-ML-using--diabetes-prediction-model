@@ -7,7 +7,7 @@ loaded_model = pickle.load(open("trained_model.sav", "rb"))
 def diabetes_prediction(input_data):
 
 # changing the input_data to numpy array
-    input_data_as_numpy_array = np.asarray(input_data)
+    input_data_as_numpy_array = np.asarray(input_data, dtype=float)
 
 # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
